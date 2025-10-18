@@ -48,6 +48,8 @@ char* Space_remover(char expression[50])
 
 
     }
+
+    // some issue before this!!!
     int counter = 0;
     for ( int i = 0 ; expression_copy[i] != 0 ; i++)
     {
@@ -55,6 +57,7 @@ char* Space_remover(char expression[50])
         printf("%c" , expression_copy[i]);
     }
     printf("%d" , counter);
+    
     
 
 
