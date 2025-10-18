@@ -59,6 +59,6 @@ char* Space_remover(char expression[50])
     printf("%d" , counter);
     
     
-
+    // this loop seems to work fine
 
 }   
