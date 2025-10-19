@@ -1,64 +1,28 @@
 #include <stdio.h>
 
-char* Space_remover(char expression[50]);
-
+char* space_remove(char expression[40]);
 
 int main()
 {
-    Space_remover("Hello world");
+    char *string = "HEllo world this is sachit!!!!";
+    space_remove(string);
     return 0;
 }
 
-char* Space_remover(char expression[50])
+char* space_remove(char expression[40])
 {
-    int count = 0;
-    char expression_copy[50];
-    for ( int i = 0 ; expression[i] != '\0' ;i++)
-    {   
-        count++;
-        if ( count > 40)
+    printf("Hi");
+    char clear_expression[50];
+    int i , j = 0;
+    for (i = 0 ; expression[i] != '\0' ; i++)
+    {
+        if (expression[i] != ' ')
         {
-            printf("cant be greater than 40\n");
-            break;
+            clear_expression[j] = expression[i];
+            j++;
         }
-    }  
-    
-    for ( int i = 0 ; i < count ; i++)
-    {
-        expression_copy[i] = expression[i];
     }
-    
-    for ( int i = 0 ; i < count ; i++)
-    {
-        if ( expression[i] == ' ')
-        {
-            int space_counter = 0;
-            for ( int j = i; j < count; j++)
-            {
-                space_counter++;
-                if (count == j+1)
-                {
-                    break;
-                }
-                expression_copy[j] = expression[j+1];
-            }
-            expression_copy[count-1-space_counter] = '\0';
+    clear_expression[j] = '\0';
+    printf("%s" , clear_expression);
 
-        }
-
-
-    }
-
-    // some issue before this!!!
-    int counter = 0;
-    for ( int i = 0 ; expression_copy[i] != 0 ; i++)
-    {
-        counter++;
-        printf("%c" , expression_copy[i]);
-    }
-    printf("%d" , counter);
-    
-    
-    // this loop seems to work fine
-
-}   
+}
