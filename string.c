@@ -48,35 +48,27 @@ char string_replace(int start , int end , char string[40] , char new_text[40])
     //replace the text between i and j to the new text where i and j are included
     int difference = end - start -1;
     int new_str_length = string_length(new_text);
+    char updated_string[40];
+    int k = 0;
     
-    if ( start != 0)
+    for ( int i = 0 ; i < start && string[i] != '\0' ; i++)
     {
-        int difference = end - start +1;
-        char updated_string[40];
-        for (int i = 0 ; i < start ;i++)
-        {
-            string_append(updated_string , string[i]);
-        }
-
-        for ( int i = 0 ; i < new_str_length ; i++)
-        {
-            string_append(updated_string , new_text[i]);
-        }
-
-        for ( int i = new_str_length ; i ; i++)
-        {
-            
-        }
-
-
+        updated_string[k] = string[i];
+        k++;
     }
 
-    else if ( start == 0)
-    {
-
+    for (int i = 0; new_text[i] != '\0'; i++) {
+        updated_string[k] = new_text[i];
+        k++;
     }
 
+    for (int i = end + 1; string[i] != '\0'; i++) {
+        updated_string[k] = string[i];
+        k++;
+    }
     
+    updated_string[k] ='\0';
+    // return the updated string
 
 }
 
