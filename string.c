@@ -89,4 +89,30 @@ char *substring_finder(int starting, int ending, char string[40])
 
 char *string_insert(char string[50], char added_string[50], int index)
 {
+    int string_length = 50;
+    int added_length = 50;
+    int new_array[100];
+    int i = 0;
+    int j = 0;
+
+    // original string
+    for (int i = 0; i < index && i < string_length; i++)
+    {
+        new_array[i] = string[i];
+    }
+
+    // copy the added string
+    for (int j = 0; j < added_length; j++)
+    {
+        new_array[i + j] = added_string[j];
+    }
+
+    // Copy remaining part of original string
+    for (int k = index; k < string_length; k++)
+    {
+        new_array[i + j] = string[k];
+        j++;
+    }
+
+    // return the string
 }

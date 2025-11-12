@@ -93,7 +93,3 @@ void bracket(char expression[40])
         }
     }
 }
-void print()
-{
-    printf(" \n");
-}
