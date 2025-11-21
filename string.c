@@ -7,12 +7,14 @@
 // string append
 // substring finder
 // string insert
+// string search
 
 int string_length(char string[50]);
 char *string_append(char string[50], char append[50]);
 char *string_replace(int start, int end, char string[40], char new_text[40]);
 char *substring_finder(int start, int end, char string[40]);
 char *string_insert(char string[50], char added_string[50], int index);
+char *string_search(char string[50], char search_string[50]);
 
 int string_length(char string[50])
 {
@@ -115,4 +117,12 @@ char *string_insert(char string[50], char added_string[50], int index)
     }
 
     // return the string
+}
+
+char *string_search(char string[50], char search_string[50])
+{
+
+    // new array
+    char *a = (int *)malloc(sizeof(int) * 50);
+    // 50
 }

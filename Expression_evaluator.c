@@ -12,7 +12,7 @@ int expression_bracket_size = 20; // set at 20 can be increased
 
 int main()
 {
-    char string[] = "(4+(5-1))+(7*2)"; // test string - Hardcoded
+    char string[] = "(4+(5-           1))+(7*2)"; // test string - Hardcoded
     space_remove(string);
     return 0;
 }
